@@ -1,3 +1,286 @@
-/**
- * Define your mixins within this file.
-**/
+/* Default */
+.colorDefault {
+    color: @default;
+}
+
+.backgroundDefault {
+    background: @default;
+}
+
+.borderDefault {
+    border-color: @default;
+}
+
+/* Primary */
+.colorPrimary {
+    color: @primary !important;
+}
+
+.backgroundPrimary {
+    background: @primary !important;
+}
+
+.borderPrimary {
+    border-color: @primary !important;
+}
+
+/* Info */
+.colorInfo {
+    color: @info !important;
+}
+
+.backgroundInfo {
+    background: @info !important;
+}
+
+.borderInfo {
+    border-color: @info !important;
+}
+
+/* Link */
+.colorLink {
+    color: @link !important;
+}
+
+/* Success */
+.colorSuccess {
+    color: @success !important;
+}
+
+.backgroundSuccess {
+    background: @success !important;
+}
+
+.borderSuccess {
+    border-color: @success !important;
+}
+
+/* Warning */
+.colorWarning {
+    color: @warning !important;
+}
+
+.backgroundWarning {
+    background: @warning !important;
+}
+
+.borderWarning {
+    border-color: @warning !important;
+}
+
+/* Danger */
+.colorDanger {
+    color: @danger !important;
+}
+
+.backgroundDanger {
+    background: @danger !important;
+}
+
+.borderDanger {
+    border-color: @danger !important;
+}
+
+/* Fonts */
+.colorFont1 {
+    color: @text-color-soft3 !important;
+}
+
+.colorFont2 {
+    color: @text-color-secondary !important;
+}
+
+.colorFont3 {
+    color: @text-color-highlight !important;
+}
+
+.colorFont4 {
+    color: @text-color-soft !important;
+}
+
+.colorFont5 {
+    color: @text-color-soft2 !important;
+}
+
+.heading {
+    font-size: 16px;
+    font-weight: 300;
+    color: @text-color-highlight;
+    background-color: white;
+    border: none;
+    padding: 10px;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-break {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+//
+// Thumbnails
+// --------------------------------------------------
+.img-rounded {
+    border-radius: 3px;
+}
+
+// Additional Mixins
+// --------------------------------------------------
+
+// Clearfix Mixin
+.clearfix() {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+// Centering Mixins
+.center() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// Flexbox Mixins
+.flex-container() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row() {
+    flex-direction: row;
+}
+
+.flex-column() {
+    flex-direction: column;
+}
+
+.flex-justify-between() {
+    justify-content: space-between;
+}
+
+.flex-align-center() {
+    align-items: center;
+}
+
+.flex-align-start() {
+    align-items: flex-start;
+}
+
+.flex-align-end() {
+    align-items: flex-end;
+}
+
+// Animation Mixins
+.fade-in() {
+    animation: fadeIn ease 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-out() {
+    animation: fadeOut ease 0.5s;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+// Box Shadow Mixins
+.box-shadow(@x: 0, @y: 0, @blur: 10px, @spread: 0, @color: rgba(0, 0, 0, 0.1)) {
+    box-shadow: @x @y @blur @spread @color;
+}
+
+// Gradient Mixins
+.gradient(@start-color, @end-color) {
+    background-image: linear-gradient(to bottom, @start-color, @end-color);
+}
+
+.radial-gradient(@start-color, @end-color) {
+    background-image: radial-gradient(circle, @start-color, @end-color);
+}
+
+// Text Shadow Mixin
+.text-shadow(@color: rgba(0, 0, 0, 0.5), @x: 0, @y: 0, @blur: 0) {
+    text-shadow: @x @y @blur @color;
+}
+
+// Circle Mixin
+.circle(@size: 50px, @color: black) {
+    width: @size;
+    height: @size;
+    background-color: @color;
+    border-radius: 50%;
+}
+
+// Triangle Mixin
+.triangle(@size: 10px, @color: black, @direction: up) {
+    width: 0;
+    height: 0;
+    border-left: @size solid transparent;
+    border-right: @size solid transparent;
+
+    &.up {
+        border-bottom: @size solid @color;
+    }
+
+    &.down {
+        border-top: @size solid @color;
+    }
+
+    &.left {
+        border-right: @size solid @color;
+        border-left: 0;
+    }
+
+    &.right {
+        border-left: @size solid @color;
+        border-right: 0;
+    }
+}
+
+// Ellipsis Text Overflow Mixin
+.text-ellipsis() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// Gradient Border Mixin
+.gradient-border(@color-start, @color-end, @width: 1px, @side: top) {
+    border-style: solid;
+    border-width: @width;
+    border-image: linear-gradient(to right, @color-start, @color-end) 1;
+    @side: 0;
+}
+
+// Striped Background Mixin
+.striped-background(@color1, @color2, @size: 20px) {
+    background: linear-gradient(45deg, @color1 25%, transparent 25%, transparent 75%, @color1 75%, @color1), linear-gradient(45deg, @color1 25%, transparent 25%, transparent 75%, @color1 75%, @color1);
+    background-size: @size @size;
+}
