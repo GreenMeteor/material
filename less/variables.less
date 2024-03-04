@@ -1,13 +1,96 @@
-/**
- * Define or overwrite your theme variables here.
- *
- * Check for @humhub/static/less/variables.less file for all available variables.
- * 
- * You can also access your variables within your view files by calling Yii::$app->view->theme->variable('myVariable');
- *
- * You can disable the import of humhub theme components by using variables of the format @prev-{component} e.g.:
- * This will prevent comment.less component from beeing imported.
- * e.g.:
- * @prev-comment: true;
- *
-**/
+// Theme color variables
+// --------------------------------------------------
+
+// Primary color (used for primary buttons, links, etc.)
+@primary: #2196F3;
+
+// Secondary color (optional, used for secondary buttons, etc.)
+@secondary: #FFC107;
+
+// Info color (used for informative elements)
+@info: #21A1B3;
+
+// Success color (used for success messages, buttons, etc.)
+@success: #4CAF50;
+
+// Warning color (used for warning messages, buttons, etc.)
+@warning: #FF9800;
+
+// Danger color (used for error messages, buttons, etc.)
+@danger: #F44336;
+
+// Link color (used for hyperlinks)
+@link: @info;
+
+// Text colors
+// --------------------------------------------------
+
+// Default body text color.
+@text-color-main: #212121;
+
+// Secondary text color.
+@text-color-secondary: #757575;
+
+// Highlighted text color (e.g., active links, hovered links).
+@text-color-highlight: #000000;
+
+// Soft text color (used for side information like dates, placeholders, etc.).
+@text-color-soft: #757575;
+
+// Soft text color 2 (used for side information like wall entry links, help blocks in forms, etc.).
+@text-color-soft2: #9E9E9E;
+
+// Soft text color 3 (used in grid view summary and installer).
+@text-color-soft3: #9E9E9E;
+
+// Contrast color for backgrounds with primary, info, success, warning, danger colors.
+@text-color-contrast: #FFFFFF;
+
+// Background colors
+// --------------------------------------------------
+
+// Main content background color (should be in contrast with text colors).
+@background-color-main: #FFFFFF;
+
+// Secondary background color (used for tabs, etc.).
+@background-color-secondary: #F5F5F5;
+
+// Page background color (used for the page background).
+@background-color-page: #F0F0F0;
+
+// Informative highlighting color (e.g., comment permalink, shared item).
+@background-color-highlight: #B2EBF2;
+
+// Informative highlighting soft color (e.g., wiki active category).
+@background-color-highlight-soft: #E0F7FA;
+
+// Additional background colors
+@background3: #EEEEEE;
+@background4: #E0E0E0;
+
+// Bootstrap Alert boxes
+// --------------------------------------------------
+
+// Alert box success (used in forms)
+@background-color-success: #F7FBF4;
+@text-color-success: #84BE5E;
+@border-color-success: #97D271;
+
+// Alert box warning (used in forms)
+@background-color-warning: #FFFBF7;
+@text-color-warning: #E9B168;
+@border-color-warning: #FDD198;
+
+// Alert box danger (used in forms)
+@background-color-danger: #FFF6F6;
+@text-color-danger: #FF8989;
+@border-color-danger: #FF8989;
+
+// Fonts
+// --------------------------------------------------
+
+// Roboto font
+@font-family: 'Roboto', sans-serif;
+
+// Mail fonts
+@mail-font-family: 'Open Sans', Arial, Tahoma, Helvetica, sans-serif;
