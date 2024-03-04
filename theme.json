@@ -1,0 +1,16 @@
+{
+    "name": "Template",
+    "description": "This is a template HumHub theme.",
+    "keywords": ["template", "theme"],
+    "version": "1.0.2",
+    "authors": [
+        {
+            "name": "GreenMeteor"
+        }
+    ],
+    "homepage": "https://github.com/GreenMeteor/humhub-template-theme",
+    "license": "AGPL",
+    "humhub": {
+        "minVersion": "1.12.1"
+    }
+}
