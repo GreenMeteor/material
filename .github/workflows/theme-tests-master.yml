@@ -7,6 +7,12 @@ on:
 
 jobs:
   tests:
-    uses: GreenMeteor/actions/.github/workflows/theme-tests-master.yml@main
-    with:
-      theme-name: Material
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run theme tests
+        uses: GreenMeteor/actions/.github/workflows/theme-tests-master.yml@main
+        with:
+          theme-name: Material
