@@ -1,0 +1,12 @@
+name: Theme Tests - master
+
+on:
+  push:
+  schedule:
+    - cron: "0 0 * * 0"
+
+jobs:
+  tests:
+    uses: GreenMeteor/actions/.github/workflows/theme-tests-master.yml@main
+    with:
+      theme-name: Material
