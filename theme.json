@@ -1,16 +1,16 @@
 {
-    "name": "Template",
-    "description": "This is a template HumHub theme.",
-    "keywords": ["template", "theme"],
-    "version": "1.0.2",
+    "name": "Material",
+    "description": "This is a Material based theme for HumHub, providing a modern and visually appealing design based on the principles of Material Design.",
+    "keywords": ["material", "theme"],
+    "version": "1.0.0",
     "authors": [
         {
-            "name": "GreenMeteor"
+            "name": "Green Meteor"
         }
     ],
-    "homepage": "https://github.com/GreenMeteor/humhub-template-theme",
+    "homepage": "https://github.com/GreenMeteor/material",
     "license": "AGPL",
     "humhub": {
-        "minVersion": "1.12.1"
+        "minVersion": "1.15.0"
     }
 }
